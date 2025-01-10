@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #272c28;
+    color: #A4C713;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d; /* Added to enable 3D transform */
+    transition: transform 1s; /* Smooth transition for rotation */
+}
+
+.card {
+    background-color: rgba(39, 44, 40, 0.8);
+    color: #A4C713;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px; /* Adjusted height for vertical rectangular shape */
+    position: absolute;
+    transition: transform 0.5s;
+    text-align: center;
+    backface-visibility: hidden; /* Hide the back face of the card */
+}
+
+#about {
+    transform: translateZ(300px);
+}
+
+#projects {
+    transform: rotateY(90deg) translateZ(300px);
+}
+
+#experience {
+    transform: rotateY(-90deg) translateZ(300px);
+}
+
+#contact {
+    transform: rotateY(180deg) translateZ(300px);
+}
